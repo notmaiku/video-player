@@ -26,6 +26,7 @@ export default function Home() {
       <pre>
         <code>{JSON.stringify(hello(), null, 2)}</code>
         <code>{JSON.stringify(start(), null, 2)}</code>
+        <code>from the db{JSON.stringify(fromDb(), null, 2)}</code>
       </pre>
     </main>
   );

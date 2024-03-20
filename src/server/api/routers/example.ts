@@ -11,6 +11,9 @@ export const exampleRouter = createTRPCRouter({
   start: publicProcedure
     .query(() => {
       return `this is trpc`;
+    }),
+  halt: publicProcedure
+    .query(() => {
+      return `hello halt`;
     })
-
 });

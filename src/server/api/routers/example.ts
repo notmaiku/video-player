@@ -21,9 +21,9 @@ export const exampleRouter = createTRPCRouter({
       const result = db.select().from(users).all();
       return result
     }),
-  // getName : publicProcedure
-  //   .query(() => {
-  //     const result = db.select('name').from(users).all();
-  //     return result
-  //   })
+  getName : publicProcedure
+    .query(() => {
+      const result = db.select().from(users).all();
+      return result
+    })
 });

@@ -8,6 +8,7 @@ import { nameShared } from '../components/NameInput';
 export default function Home() {
   const hello = createAsync(() => api.example.hello.query("world"));
   const start = createAsync(() => api.example.start.query());
+  const dbNames = createAsync(() => api.example.getName.query());
   const  [ nameRef ] = nameShared;
   return (
     <main>
@@ -26,7 +27,7 @@ export default function Home() {
       <pre>
         <code>{JSON.stringify(hello(), null, 2)}</code>
         <code>{JSON.stringify(start(), null, 2)}</code>
-        <code>from the db{JSON.stringify(fromDb(), null, 2)}</code>
+        <code>from the db{JSON.stringify(dbNames(), null, 2)}</code>
       </pre>
     </main>
   );
